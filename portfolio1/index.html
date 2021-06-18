@@ -1,0 +1,127 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>PORTFOLIO</title>
+    <link rel = "icon" href = "images/favicon.ico" type = "image/x-icon">
+    <link rel="stylesheet" href="portfolio.css">
+    <script language="javascript" type="text/javascript" src="portfolio.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Rozha+One&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <div class='spinner-wrapper'>
+        <div class="loader">
+            <div class="inner one"></div>
+            <div class="inner two"></div>
+            <div class="inner three"></div>
+        </div>
+    </div>
+
+<script>
+  let spinnerWrapper = document.querySelector('.spinner-wrapper');
+
+window.addEventListener('load', function () {
+// spinnerWrapper.style.display = 'none';
+spinnerWrapper.parentElement.removeChild(spinnerWrapper);
+});
+</script>
+<!-- Navbar Section -->
+<nav class="navbar">
+  <div class="navbar__container">
+    <a href="#home" id="navbar__logo">PORTFOLIO</a>
+    <div class="navbar__toggle" id="mobile-menu">
+      <span class="bar"></span> <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+    <ul class="navbar__menu">
+      <li class="navbar__item">
+        <a href="#home" class="navbar__links" id="home-page">HOME</a>
+      </li>
+      <li class="navbar__item">
+        <a href="#about" class="navbar__links" id="about-page">ABOUT</a>
+      </li>
+      <li class="navbar__item">
+        <a href="#skills" class="navbar__links" id="skills-page">SKILLS</a>
+      </li>
+      <li class="navbar__item">
+        <a href="#project" class="navbar__links" id="project-page">PROJECT</a>
+      </li>
+      <li class="navbar__btn">
+        <a href="#join" class="button" id="join-page">JOIN</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<script>
+        const menu = document.querySelector('#mobile-menu');
+      const menuLinks = document.querySelector('.navbar__menu');
+      const navLogo = document.querySelector('#navbar__logo');
+
+      // Display Mobile Menu
+      const mobileMenu = () => {
+      menu.classList.toggle('is-active');
+      menuLinks.classList.toggle('active');
+      };
+
+      menu.addEventListener('click', mobileMenu);
+
+        //  Close mobile Menu when clicking on a menu item
+        const hideMobileMenu = () => {
+      const menuBars = document.querySelector('.is-active');
+      if (window.innerWidth <= 768 && menuBars) {
+      menu.classList.toggle('is-active');
+      menuLinks.classList.remove('active');
+      }
+      };
+
+      menuLinks.addEventListener('click', hideMobileMenu);
+      navLogo.addEventListener('click', hideMobileMenu);
+
+      window.onscroll = function() {myFunction()};
+      
+      var navbar = document.getElementById("navbar");
+      var sticky = navbar.offsetTop;
+      
+      function myFunction() {
+        if (window.pageYOffset >= sticky) {
+          navbar.classList.add("sticky")
+        } else {
+          navbar.classList.remove("sticky");
+        }
+      }
+      
+</script>
+<!-- start Section -->
+  <section class="start" id="home">
+    <div class="start_container">
+      <img src="images/avatar.jpg">
+      <h1 class="start_heading">आशीष <span>सिंह</span></h1>
+      <p class="start_description">WEB DEVELOPMENT&nbsp;/&nbsp;PROGRAMMING</p><br>
+      <div class="social">
+        <a href="https://www.linkedin.com/in/ashish-singh-1771091a5/" aria-label="linkedin" class="ld" target="_blank"><i class="fa fa-linkedin fa-3x"></i></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://www.instagram.com/ash1sh_1hakur10/?hl=en" aria-label="instagram" class="insta" target="_blank"><i class="fa fa-instagram fa-3x"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://www.facebook.com/profile.php?id=100009849559107" aria-label="facebook" class="fb" target="_blank"><i class="fa fa-facebook-f fa-3x"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://github.com/Learner4797" aria-label="github" target="_blank"><i class="fa fa-github fa-3x" class="gh"></i></a>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+      </div>
+    </div>
+  </section>
+<!-- about section -->
+<section class="about" id="about">
+  <p class="heading">ABOUT</p>
+</section>
+<!-- skills section -->
+<section class="skills" id="skills">
+  <p class="heading">SKILLS</p>
+</section>
+
+  <script src="portfolio.js"></script>
+</body>
+</html>
